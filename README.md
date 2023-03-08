@@ -44,11 +44,14 @@ You can SSG with or without data.
   📝 `getStaticProps` runs on each requrest during development stage.
 
 - `Server Side Generation (SSR)`: SSR is when the page is hydrated based on requerst. If the usre requerst for page-A, only the page-A will be hydrated and served. Pages are **NOT** built on build time.
+  🔗 Essentials of [`getStaticProps`](https://nextjs.org/docs/basic-features/data-fetching/get-static-props)
 
-## About the top-leve `posts` directory
+## About the top-level `posts` directory
 
 you will notice a posts directory and two markdown file inside them. This is where we will use to fetch our data locally.
 
 at the top you have section with meta information known as _YAML_ front matter. YAML stands for 'Yet Another Language' (in case you wondered). To parse this front matter you need a parser known as _gray-matter_. Install the parser with `npm install gray-matter`.
 
 We created a _utility_ function that fetches post with gray matter. look [util](utils/posts.js) for the process.
+
+Go to [Home](pages/index.js) and see the usage of the `getStaticProps` there.
