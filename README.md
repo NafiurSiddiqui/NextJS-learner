@@ -2,6 +2,8 @@
 
 This repo contains a general get starter pack of NextJS.
 
+![nextJslogo](/public/images/Nextjs-logo.jpg)
+
 ## Pages
 
 Any pages you have goes under this folder. This is basically the `root` of your `routing`.
@@ -34,4 +36,17 @@ There are two **type** of pre-rendering.
 
 -`Static Site Generation (SSG)`: Static site generation is when your page is preload with HTML. Meaning, all the files are already hydrated. _Hydration_ is the process of filling up empty page with Html, css, Js. All your files will be pre-rendered on build time.
 
+You can SSG with or without data.
+
+- **Without Data** : You can SSG without any exterenal data. meaning fetching from any external source like DB or CMS. This is the default.
+- **With Data**: Scenario when you will **NEED** to fetch external data. In this case you need use `getStaticProps`. You use it at the bottom your exported comoponents wherever you need this. This is an async function that you need to mention. The data is fetched in the build time.
+
+  📝 `getStaticProps` runs on each requrest during development stage.
+
 - `Server Side Generation (SSR)`: SSR is when the page is hydrated based on requerst. If the usre requerst for page-A, only the page-A will be hydrated and served. Pages are **NOT** built on build time.
+
+## About the top-leve `posts` directory
+
+you will notice a posts directory and two markdown file inside them. This is where we will use to fetch our data locally.
+
+at the top you have section with meta information known as _YAML_ front matter. YAML stands for 'Yet Another Language' (in case you wondered). To parse this front matter you need a parser known as _gray-matter_. Install the parser with `npm install gray-matter`.
