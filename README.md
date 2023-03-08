@@ -17,3 +17,6 @@ Any sub-folder indside nav will act as the base of the router. for example, we h
 Any static assets like images goes inside the top-level public directory.
 
 - `image` : You have a image component provided by nextJS to handle the optimization. You need to import it as `next/image`.
+
+- `head` : You udpate your title and meta-information inside the `Head` component provided by next. you do that by importing `next/head`. Notice the difference between capital and lowercase letter that comes in `<head>` HTML element. You can use it to other compoenent.
+- `script` : You can add any script tag inside the `Head` but use `next/script` component to take care of placing script properly. You can check out the use-case on the [first-post](pages/posts/first-post.js). Uncomment the script and see it in play. That is an example of how you include any third party script.
