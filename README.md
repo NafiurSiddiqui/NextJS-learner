@@ -50,3 +50,5 @@ You can SSG with or without data.
 you will notice a posts directory and two markdown file inside them. This is where we will use to fetch our data locally.
 
 at the top you have section with meta information known as _YAML_ front matter. YAML stands for 'Yet Another Language' (in case you wondered). To parse this front matter you need a parser known as _gray-matter_. Install the parser with `npm install gray-matter`.
+
+We created a _utility_ function that fetches post with gray matter. look [util](utils/posts.js) for the process.
