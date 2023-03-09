@@ -4,6 +4,19 @@ This repo contains a general get starter pack of NextJS.
 
 ![nextJslogo](/public/images/Nextjs-logo.jpg)
 
+# Table of contents
+
+- [NextJS-learner](#nextjs-learner)
+- [Table of contents](#table-of-contents)
+  - [Pages](#pages)
+  - [Navigation](#navigation)
+  - [Assests and meta data](#assests-and-meta-data)
+  - [Pre-rendering and data fetching](#pre-rendering-and-data-fetching)
+  - [About the top-level `posts` directory](#about-the-top-level-posts-directory)
+  - [Dynamic Routes](#dynamic-routes)
+  - [fallback](#fallback)
+  - [Renedering markdown content](#renedering-markdown-content)
+
 ## Pages
 
 Any pages you have goes under this folder. This is basically the `root` of your `routing`.
