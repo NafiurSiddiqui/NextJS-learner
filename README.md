@@ -44,7 +44,7 @@ You can SSG with or without data.
   📝 `getStaticProps` runs on each requrest during development stage.
 
 - `Server Side Generation (SSR)`: SSR is when the page is hydrated based on requerst. If the usre requerst for page-A, only the page-A will be hydrated and served. Pages are **NOT** built on build time.
-  🔗 Essentials of [`getStaticProps`](https://nextjs.org/docs/basic-features/data-fetching/get-static-props)
+  🔗 Essentials of [getStaticProps](https://nextjs.org/docs/basic-features/data-fetching/get-static-props)
 
 ## About the top-level `posts` directory
 
@@ -55,3 +55,15 @@ at the top you have section with meta information known as _YAML_ front matter. 
 We created a _utility_ function that fetches post with gray matter. look [util](utils/posts.js) for the process.
 
 Go to [Home](pages/index.js) and see the usage of the `getStaticProps` there.
+
+## Dynamic Routes
+
+This is when your page's path depends on external data. Let's say, user wants to read a blog called "foo" and another user wants to read "bar".
+
+This is done so by creating a file naming convetion where the name of the file is encapsulated within a squre bracket. `[name]`.js. So, the path will look like this `/pages/posts/[id].js`. where `id` will be generated dynamically.
+
+This dynamic page must contain three things.
+
+1. React compoennt to render the content.
+2. `getStaticPaths` - which returns an array of possible values for `id`.
+3. `getStaticProps` - fetched the data with the given `id`.
