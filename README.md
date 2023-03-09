@@ -70,6 +70,10 @@ This dynamic page must contain three things.
 
 Go to [posts](utils/posts.js) utility function and see [getAllPostsIds](utils/posts.js#37) function. You must return `param` object with name of the dynamic file in our case `id`. See at the bottom functions of [[id].js](pages/posts/[id].js).
 
+## fallback
+
+`fallback` inside `getStaticPath` is basically way to tell nextJS what happens if a path is not found. Go to [fallback doc](https://nextjs.org/docs/api-reference/data-fetching/get-static-paths#fallback-false) to learn in depth.
+
 ## Renedering markdown content
 
 you need a library to parse markdown content. Let's use `remark` here. go ahead and run `npm install remark remark-html`. We modified the [`getAllPostData`](utils/posts.js#82) and **important** we turned it into `async/await` function since `remark` requires `async` operation. Hence we updated our [`getStaticProps`](pages/posts/[id].js) and `await` the resuls as well.
