@@ -67,3 +67,5 @@ This dynamic page must contain three things.
 1. React compoennt to render the content.
 2. `getStaticPaths` - which returns an array of possible values for `id`.
 3. `getStaticProps` - fetched the data with the given `id`.
+
+Go to [posts](utils/posts.js) utility function and see [getAllPostsIds](utils/posts.js#37) function. You must return `param` object with name of the dynamic file in our case `id`. See at the bottom functions of [[id].js](pages/posts/[id].js).
