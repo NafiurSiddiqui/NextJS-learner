@@ -72,4 +72,4 @@ Go to [posts](utils/posts.js) utility function and see [getAllPostsIds](utils/po
 
 ## Renedering markdown content
 
-you need a library to parse markdown content. Let's use `remark` here. go ahead and run `npm install remark remark-html`.
+you need a library to parse markdown content. Let's use `remark` here. go ahead and run `npm install remark remark-html`. We modified the [`getAllPostData`](utils/posts.js#82) and **important** we turned it into `async/await` function since `remark` requires `async` operation. Hence we updated our [`getStaticProps`](pages/posts/[id].js) and `await` the resuls as well.
