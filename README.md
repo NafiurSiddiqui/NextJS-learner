@@ -69,3 +69,7 @@ This dynamic page must contain three things.
 3. `getStaticProps` - fetched the data with the given `id`.
 
 Go to [posts](utils/posts.js) utility function and see [getAllPostsIds](utils/posts.js#37) function. You must return `param` object with name of the dynamic file in our case `id`. See at the bottom functions of [[id].js](pages/posts/[id].js).
+
+## Renedering markdown content
+
+you need a library to parse markdown content. Let's use `remark` here. go ahead and run `npm install remark remark-html`.
