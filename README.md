@@ -16,6 +16,9 @@ This repo contains a general get starter pack of NextJS.
   - [Dynamic Routes](#dynamic-routes)
   - [fallback](#fallback)
   - [Renedering markdown content](#renedering-markdown-content)
+  - [API Routes](#api-routes)
+  - [Dos and Don'ts of API Routes](#dos-and-donts-of-api-routes)
+  - [Preview Mode](#preview-mode)
 
 ## Pages
 
@@ -92,3 +95,26 @@ Go to [posts](utils/posts.js) utility function and see [getAllPostsIds](utils/po
 you need a library to parse markdown content. Let's use `remark` here. go ahead and run `npm install remark remark-html`. We modified the [`getAllPostData`](utils/posts.js#82) and **important** we turned it into `async/await` function since `remark` requires `async` operation. Hence we updated our [`getStaticProps`](pages/posts/[id].js) and `await` the resuls as well.
 
 Rest of them are just basic js like used in utlils and date.
+
+## API Routes
+
+With nextJs you can create nodeJs API endpoint which is a serverless function. You can create the endpoint right inside Next. These serverless function is known as _Lambdas_.
+
+you create something like that inside `pages/api` directory. we will create a simple api endpoint there. for instance, our [hello.js](pages/api/hello.js).
+
+Anything you create inside this API will be treated as backend code and won't increase your client-side bundle size.
+
+This function must be exported and comes in with two parameters by default.
+
+- `req` : you get an instance of http.IncomingMessage and some pre-built middlewares.
+
+- `res` : you get the http.ServerResponse and bunch of helper functions.
+
+## Dos and Don'ts of API Routes
+
+- Never fetch an API route from `getStaticProps` or `getStaticPaths`. Instead, write your server-side code straight inside them. Read more on [writing server side code](https://nextjs.org/docs/basic-features/data-fetching/get-static-props#write-server-side-code-directly).
+- A good usecase would be handling form input and do something based on submission methods.
+
+## Preview Mode
+
+You can see the changes you made to draft inside a headless CMS on next by by-passing SSG.
