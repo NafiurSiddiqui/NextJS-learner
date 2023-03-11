@@ -13,8 +13,8 @@ export default function Home({ allPostsData }) {
 			</Head>
 			<section className={utilStyles.headingMd}>
 				<p>
-					Hi, I am a web developer with a passion for manifesting ideas into
-					life.
+					Hi, 👋 I am a software developer with a passion for manifesting ideas
+					into life.
 				</p>
 			</section>
 
