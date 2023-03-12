@@ -19,6 +19,7 @@ This repo contains a general get starter pack of NextJS.
   - [API Routes](#api-routes)
   - [Dos and Don'ts of API Routes](#dos-and-donts-of-api-routes)
   - [Preview Mode](#preview-mode)
+  - [SEO](#seo)
 
 ## Pages
 
@@ -118,3 +119,7 @@ This function must be exported and comes in with two parameters by default.
 ## Preview Mode
 
 You can see the changes you made to draft inside a headless CMS on next by by-passing SSG.
+
+## SEO
+
+NextJS take care of the SEO very weill unlike React only apps. since this is a vast topic, I won't be adding anything extra here and you should visit [SEO](https://nextjs.org/learn/seo/introduction-to-seo) on offical nextJs.
